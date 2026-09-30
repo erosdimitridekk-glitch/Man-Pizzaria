@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizzaria Maná - A melhor pizza de Santarém. Pizzas artesanais, ingredientes selecionados e entrega rápida.">
+  <title>Pizzaria Maná | A melhor pizza de Santarém</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <img src="assets/logo.png" alt="Pizzaria Maná" class="logo-img">
+        <span class="logo-text">Pizzaria Maná</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre nós</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Carrinho">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#cardapio" class="btn btn-primary header-cta">Pedir agora</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">Santarém - Pará</span>
+        <h1>Pizzaria Maná</h1>
+        <p class="hero-slogan">A melhor pizza de Santarém</p>
+        <p class="hero-desc">Pizzas artesanais feitas com ingredientes selecionados, massa crocante e o sabor que conquista a cidade.</p>
+        <div class="hero-buttons">
+          <a href="#cardapio" class="btn btn-primary btn-lg">
+            <i class="fas fa-utensils"></i> Ver cardápio
+          </a>
+          <a href="#" class="btn btn-outline btn-lg" id="heroWhatsapp">
+            <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80" alt="Pizza deliciosa" class="hero-pizza">
+        <div class="hero-badge-float">
+          <span class="badge-number">4.9</span>
+          <span class="badge-text">Avaliação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques -->
+  <section class="features" id="destaques">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Por que nos escolher</span>
+        <h2>O diferencial da Maná</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-pizza-slice"></i>
+          </div>
+          <h3>Pizzas Artesanais</h3>
+          <p>Feitas à mão com receita própria e o toque especial da nossa cozinha.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Ingredientes Selecionados</h3>
+          <p>Só os melhores ingredientes frescos e de qualidade para cada pizza.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bread-slice"></i>
+          </div>
+          <h3>Massa Saborosa</h3>
+          <p>Massa leve, crocante por fora e macia por dentro — o equilíbrio perfeito.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-motorcycle"></i>
+          </div>
+          <h3>Entrega em Santarém</h3>
+          <p>Delivery rápido e cuidadoso para você receber a pizza quentinha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cardápio -->
+  <section class="menu-section" id="cardapio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nosso cardápio</span>
+        <h2>Sabores que conquistam</h2>
+        <p class="section-desc">Escolha suas favoritas e monte o pedido. Os produtos abaixo são demonstrativos e podem ser editados facilmente.</p>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-category="tradicionais">Tradicionais</button>
+        <button class="menu-tab" data-category="especiais">Especiais</button>
+        <button class="menu-tab" data-category="doces">Doces</button>
+        <button class="menu-tab" data-category="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Produtos carregados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="about" id="sobre">
+    <div class="container about-inner">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=80" alt="Forno de pizza">
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">Nossa história</span>
+        <h2>Sobre a Pizzaria Maná</h2>
+        <p>
+          A Pizzaria Maná nasceu do amor pela pizza e pelo desejo de oferecer a Santarém uma experiência gastronômica especial.
+          Cada pizza é preparada com cuidado, usando ingredientes selecionados e uma massa desenvolvida para conquistar o paladar da cidade.
+        </p>
+        <p>
+          Nosso compromisso é simples: qualidade, sabor e entrega rápida. Seja no forno ou na sua casa, queremos que cada fatia
+          leve o melhor da nossa cozinha até você.
+        </p>
+        <p class="about-note">
+          <em><!-- TEXTO EDITÁVEL: substitua pelas informações reais da pizzaria --></em>
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Sabores</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4.9</span>
+            <span class="stat-label">Avaliação</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Rápida</span>
+            <span class="stat-label">Entrega</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Galeria</span>
+        <h2>Momentos Maná</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Pizza no forno">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=600&q=80" alt="Pizza pepperoni">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1604382355076-af4b6eb37927?w=600&q=80" alt="Pizza margherita">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=600&q=80" alt="Ambiente">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600&q=80" alt="Pizza cortada">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avaliações -->
+  <section class="reviews" id="avaliacoes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Depoimentos</span>
+        <h2>O que nossos clientes dizem</h2>
+        <p class="section-desc reviews-note">Exemplos demonstrativos — substitua pelas avaliações reais.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Melhor pizza de Santarém! Massa perfeita e ingredientes frescos. Sempre peço a Calabresa."</p>
+          <div class="review-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <strong>Ana Paula</strong>
+              <span>Cliente frequente</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Entrega super rápida e a pizza chega quentinha. O atendimento pelo WhatsApp é excelente!"</p>
+          <div class="review-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <strong>Rafael Costa</strong>
+              <span>Santarém</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"As pizzas doces são incríveis! A de chocolate com morango é viciante. Recomendo demais."</p>
+          <div class="review-author">
+            <div class="author-avatar">M</div>
+            <div>
+              <strong>Mariana Silva</strong>
+              <span>Cliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section class="location" id="localizacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Onde estamos</span>
+        <h2>Localização</h2>
+      </div>
+      <div class="location-card">
+        <div class="location-info">
+          <div class="location-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Endereço</strong>
+              <p id="addressText">Santarém - Pará (endereço a definir)</p>
+            </div>
+          </div>
+          <div class="location-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Horário</strong>
+              <p id="hoursText">Seg a Dom: 18h às 23h</p>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/search/Santarém+Pará" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-directions"></i> Como chegar
+          </a>
+        </div>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127672.5!2d-54.75!3d-2.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjYnMjQuMCJTIDU0wrA0NScwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa Santarém">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contact" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fale conosco</span>
+        <h2>Contato</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="#" class="contact-card" id="contactWhatsapp">
+          <div class="contact-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p id="whatsappDisplay">(93) 99148-0564</p>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-card" id="contactInstagram">
+          <div class="contact-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <h3>Instagram</h3>
+          <p>@pizzariamana</p>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon location">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Endereço</h3>
+          <p>Santarém - Pará</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon clock">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Horário</h3>
+          <p>18h às 23h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <img src="assets/logo.png" alt="Pizzaria Maná" class="logo-img">
+            <span class="logo-text">Pizzaria Maná</span>
+          </a>
+          <p>A melhor pizza de Santarém. Sabor artesanal e entrega rápida.</p>
+          <div class="footer-social">
+            <a href="#" id="footerWhatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" id="footerInstagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <ul>
+            <li><i class="fab fa-whatsapp"></i> <span id="footerPhone">(93) 99148-0564</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> Santarém - PA</li>
+            <li><i class="fas fa-clock"></i> 18h às 23h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Pizzaria Maná. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Seu pedido</h3>
+      <button class="cart-close" id="cartClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-pizza-slice"></i>
+        <p>Seu carrinho está vazio</p>
+        <a href="#cardapio" class="btn btn-outline btn-sm">Ver cardápio</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-totals">
+        <div class="cart-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-row total">
+          <span>Total</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">
+        <i class="fab fa-whatsapp"></i> Finalizar pedido
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
